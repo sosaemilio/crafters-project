@@ -1,0 +1,10 @@
+.filter-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 600ms ease-in-out;
+}
+
+.filter-body.expanded {
+  max-height: 150px;
+  /* Ajusta la altura máxima según sea necesario */
+}
