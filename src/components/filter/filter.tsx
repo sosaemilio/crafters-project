@@ -19,11 +19,11 @@ function Filter() {
 	};
 
 	return (
-		<div className="filter">
+		<div className="filter p-3">
 			<div className="filter-title">
 				<h3>CRAFTED BY US, FOR YOU</h3>
 			</div>
-			<div className="filter-desc d-flex justify-content-between align-items-center">
+			<div className="filter-desc d-md-flex justify-content-between align-items-center">
 				<p>09 Productos</p>
 				<Button variant="" className="d-flex gap-2 bg-secondary-subtle" onClick={toggleFilter}>
 					<i className="bi bi-funnel-fill"></i>
@@ -34,10 +34,10 @@ function Filter() {
 				<div
 					className={`filter-body ${
 						showFilter ? styles.expanded : ""
-					} d-flex justify-content-between align-items-center mt-4`}
+					} d-md-flex justify-content-between align-items-center mt-4`}
 				>
 					<DropDownComponent name="Sort" items={arrSort} />
-					<div className="icon-group d-flex justify-content-between align-items-center gap-4">
+					<div className="icon-group d-sm-flex justify-content-start justify-content-md-between  align-items-center gap-4">
 						<DropDownComponent items={arrCategory} name="Category" />
 						<DropDownComponent items={arrBrand} name="Brand" />
 						<DropDownComponent items={arrColor} name="Color" />
