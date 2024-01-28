@@ -30,7 +30,7 @@ export default function HeroBanner () {
                   width={200}
                   height={300}
                   className="img-fluid mx-auto object-fit-cover" 
-                  style={{ height: '100%', width: '100%'  }}
+                  style={{ height: '100%', width: '100%'}}
                   alt="Hero Banner Image 1"
                 />
               </div>
