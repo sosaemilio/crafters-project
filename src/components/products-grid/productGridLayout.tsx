@@ -2,7 +2,7 @@
 import Card from "./card";
 import styles from "./card.module.css";
 
-export default function productGridLayout() {
+export default function ProductGridLayout() {
 
     const productCards = [];
     for (let i = 0; i < 6; i++) {
