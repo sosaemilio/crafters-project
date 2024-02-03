@@ -7,8 +7,8 @@ import ProductGridLayout from "@/components/products-grid/productGridLayout";
 
 export default function Home() {
 	return (
-		<div className="container-xxl m-5">
-			<NavBar></NavBar>
+		<div className="container-xxl">
+			{/* <NavBar></NavBar> */}
 			<HeroBanner></HeroBanner>
 			<Filter></Filter>
 			<ProductGridLayout></ProductGridLayout>

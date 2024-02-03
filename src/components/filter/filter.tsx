@@ -1,6 +1,7 @@
 "use client";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import DropDownComponent from "../dropdown/dropdown";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
@@ -19,13 +20,13 @@ function Filter() {
 	};
 
 	return (
-		<div className="filter p-3">
+		<div className="filter mt-5">
 			<div className="filter-title">
 				<h3>CRAFTED BY US, FOR YOU</h3>
 			</div>
-			<div className="filter-desc d-md-flex justify-content-between align-items-center">
+			<div className="filter-desc mt-4 d-md-flex justify-content-between align-items-center">
 				<p>09 Productos</p>
-				<Button variant="" className="d-flex gap-2 bg-secondary-subtle" onClick={toggleFilter}>
+				<Button variant="" className="d-flex gap-2 mt-3 m-md-0 bg-secondary-subtle" onClick={toggleFilter}>
 					<i className="bi bi-funnel-fill"></i>
 					<p>filter</p>
 				</Button>

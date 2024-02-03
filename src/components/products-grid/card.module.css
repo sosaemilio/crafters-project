@@ -1,11 +1,12 @@
 .card {
-    width: 400px;
+    max-width: 380px;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.card h3, .card p {
+.card h3,
+.card p {
     margin: 0;
 }
 
@@ -21,8 +22,14 @@
 .cardsGrid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 65px 32px;
     padding-top: 48px;
     padding-bottom: 48px;
+}
+
+@media screen and (min-width: 1280px) {
+    .cardsGrid {
+        justify-content: space-between;
+    }
 }
