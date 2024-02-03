@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function ProductPage () {
 
+    const [activeImg, setActiveImage] = useState("/placeholder.png");
     const [amount, setAmount] = useState(1);
 
     return (
@@ -14,7 +15,7 @@ export default function ProductPage () {
             <div className='d-flex flex-column w-100'>
                 <div className='w-auto'>
                     <Image
-                    src="/placeholder.png" 
+                    src={activeImg}                    
                     width={400}
                     height={300}
                     className="img-fluid object-fit-cover" 
@@ -30,15 +31,17 @@ export default function ProductPage () {
                         height={150}
                         className="img-fluid object-fit-cover pe-1 py-2" 
                         alt="Hero Banner" 
+                        onClick={() => setActiveImage("/placeholder.png")}
                         />
                     </div>
                     <div className='w-auto'>
                         <Image
-                        src="/placeholder.png" 
+                        src="/placeholder1.png" 
                         width={150}
                         height={150}
                         className="img-fluid object-fit-cover ps-1 py-2 " 
                         alt="Hero Banner" 
+                        onClick={() => setActiveImage("/placeholder1.png")}
                         />
                     </div>
                 </div>
