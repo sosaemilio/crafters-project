@@ -1,11 +1,12 @@
 .card {
-    width: 400px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.card h3, .card p {
+.card h3,
+.card p {
     margin: 0;
 }
 
