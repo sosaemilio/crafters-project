@@ -11,21 +11,21 @@ import Link from "next/link";
 
 function Login() {
 	return (
-		<div className="login-signup m-4">
-			<div className="login-container row">
-				<div className="login-img d-none d-md-block">
-					<Image src="/login/login_img.jpg" alt="" width={2000} height={300} />
+		<div className="login-signup container-xxl p-4 p-md-0">
+			<div className="login-container row m-0">
+				<div className="login-img d-none d-md-block col-md-6 position-relative">
+					<Image src="/login/login_img.jpg" alt="imagen" fill={true} />
 				</div>
-				<div className="login-form">
+				<div className="login-form col-md-6 px-md-5">
 					<h3 className="text-center mt-4">Get&#39;s started</h3>
-					<Form className="d-flex flex-column  my-5">
+					<Form className={`d-flex flex-column my-5 mx-xl-auto  ${styles.formLogin}`}>
 						<Row className="mb-3">
-							<Form.Group className="mb-3 mb-md-0" as={Col} xs={12} md={6} controlId="username">
+							<Form.Group className="mb-3 mb-lg-0" as={Col} xs={12} lg={6} controlId="username">
 								<Form.Label>First Name</Form.Label>
 								<Form.Control type="text" placeholder="David" />
 							</Form.Group>
 
-							<Form.Group as={Col} xs={12} md={6} controlId="userlastname">
+							<Form.Group as={Col} xs={12} lg={6} controlId="userlastname">
 								<Form.Label>Last Name</Form.Label>
 								<Form.Control type="text" placeholder="Clerk" />
 							</Form.Group>
