@@ -50,7 +50,7 @@ function SignUp() {
 						</Form.Group>
 
 						<Button variant="primary" type="submit">
-							Submit
+							Register
 						</Button>
 					</Form>
 					<div className="Login-google d-flex justify-content-center ">
