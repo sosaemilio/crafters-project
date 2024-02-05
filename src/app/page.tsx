@@ -5,6 +5,8 @@ import NavbarComponent from "@/components/navbar/navbar";
 import HeroBanner from "@/components/hero-banner/hero-banner";
 import Filter from "@/components/filter/filter";
 import ProductGridLayout from "@/components/products-grid/productGridLayout";
+import Footer from "@/components/footer/footer";
+
 
 export default function Home() {
 	return (
@@ -14,6 +16,7 @@ export default function Home() {
 			<HeroBanner></HeroBanner>
 			<Filter></Filter>
 			<ProductGridLayout></ProductGridLayout>
+			<Footer></Footer>
 		</div>
 	);
 }
