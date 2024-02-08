@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-// import NavBar from "@/components/navbar/navbar";
 import NavbarComponent from "@/components/navbar/navbar";
 import HeroBanner from "@/components/hero-banner/hero-banner";
 import Filter from "@/components/filter/filter";
