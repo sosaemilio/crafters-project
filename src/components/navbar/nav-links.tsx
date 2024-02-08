@@ -1,28 +1,20 @@
-"use client"
-
-import Link from 'next/link';
-import styles from './navbar.module.css';
-import { usePathname } from 'next/navigation';
-
+import { Nav } from "react-bootstrap";
 const links = [
-  { name: 'Dashboard', href: '/dashboard'},
+	{ id: 1, name: "Home", href: "/" },
+	{ id: 2, name: "Products", href: "/products" },
+	{ id: 3, name: "About Us", href: "/about" },
 ];
 
 export default function NavLinks() {
-  const pathname = usePathname();
-  return (
-    <>
-      {links.map((link) => {
-        return (
-          <Link
-            key={link.name}
-            href={link.href}
-            className={styles.navtabs}>
-            <p>{link.name}</p>
-          </Link>
-        );
-      })}
-    </>
-  );
+	return (
+		<>
+			{links.map((link) => {
+				return (
+					<Nav.Link key={link.id} href={link.href}>
+						{link.name}
+					</Nav.Link>
+				);
+			})}
+		</>
+	);
 }
-
