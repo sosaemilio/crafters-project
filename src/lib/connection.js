@@ -1,33 +1,22 @@
-const dotenv = require('dotenv');
+import { connect, connection } from "mongoose";
+import dotenv from "dotenv";
 
-dotenv.config();
-const { MongoClient } = require('mongodb');
-
-let db;
-
-const initDb = (callback) => {
-  if (db) {
-    console.log('Db is already initialized!');
-    return callback(null, db);
-  }
-  MongoClient.connect(process.env.ATLAS_URI)
-    .then((client) => {
-      db = client;
-      callback(null, db);
-    })
-    .catch((err) => {
-      callback(err);
-    });
+const isconnect = {
+	isnconnected: false,
 };
 
-const getDb = () => {
-  if (!db) {
-    throw Error('Db not initialized');
-  }
-  return db;
-};
+export async function connectDB() {
+	if (isconnect.isnconnected) return;
 
-module.exports = {
-  initDb,
-  getDb
-};
+	const db = await connect(process.env.ATLAS_URI);
+	console.log(db.connection.db.databaseName);
+	isconnect.isnconnected = db.connections[0].readyState;
+}
+
+connection.on("connected", () => {
+	console.log("Mongoose is connected");
+});
+
+connection.on("error", (err) => {
+	console.log("mongoose connection error", err);
+});
