@@ -9,7 +9,10 @@ export default async function AdminGrid() {
 
     //Retrieve the data
 	const products = await Product.find({});
-    console.log(products);
+    const productCards: any[] = [];
+    products.map((product)=> {
+        productCards.push( <ProductRow img={product.image} productName={product.product} price={product.price} category={product.category}/>)
+    })
 
     return(
         <div className={styles.bodyAdminGrid}>
@@ -19,11 +22,7 @@ export default async function AdminGrid() {
                 <div><p>Description</p></div>
                 <div><p>Delete</p></div>
             </div>
-            <ProductRow/>
-            <ProductRow/>
-            <ProductRow/>
-            <ProductRow/>
-            <ProductRow/>
+            {productCards}
         </div>
 
     )
