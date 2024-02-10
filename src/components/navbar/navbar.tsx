@@ -7,9 +7,11 @@ import { Container, Button, Form, Nav, Navbar, Offcanvas, InputGroup } from "rea
 import Image from "next/image";
 import Link from "next/link";
 import NavLinks from "./nav-links";
+import { useSession, signOut } from "next-auth/react";
 
 function NavbarComponent() {
 	const expand = "lg"; // Definimos 'expand' como "sm" para mostrar solo un Navbar
+	const { data: session } = useSession();
 
 	return (
 		<>
@@ -38,12 +40,41 @@ function NavbarComponent() {
 											<i className="bi bi-cart2 fs-5"></i>
 										</Button>
 									</Link>
-									<Link href="/login">
-										<Button variant="outline-dark">Login</Button>
-									</Link>
-									<Link href="/signup">
-										<Button variant="success">Sign Up</Button>
-									</Link>
+									{session?.user ? (
+										<>
+											<p>{session.user.name}</p>
+											{session.user.image && (
+												<Image
+													src={session.user.image}
+													height={38}
+													width={38}
+													alt="avatar google account"
+													className="rounded-circle border border-2 border-primary"
+												/>
+											)}
+											<Link href="/login">
+												<Button
+													variant="primary"
+													onClick={() =>
+														signOut({
+															callbackUrl: "/",
+														})
+													}
+												>
+													Log Out
+												</Button>
+											</Link>
+										</>
+									) : (
+										<>
+											<Link href="/login">
+												<Button variant="outline-dark">Login</Button>
+											</Link>
+											<Link href="/signup">
+												<Button variant="success">Sign Up</Button>
+											</Link>
+										</>
+									)}
 								</div>
 							</div>
 						</Offcanvas.Body>
