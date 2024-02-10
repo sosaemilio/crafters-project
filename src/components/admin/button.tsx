@@ -2,8 +2,10 @@ import styles from "./admin.module.css";
 
 export default function DeleteButton({ content }: {content: string}) {
   return (
-    <button className={styles.button}>
+    <div className={styles.button}>
+      <a href="admin/create">
         {content}
-    </button>
+      </a>
+    </div>
   );
 }

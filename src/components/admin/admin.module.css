@@ -55,3 +55,8 @@
 .adminGrid div {
     flex-basis: 1000%;
 }
+
+.button > a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
