@@ -11,15 +11,26 @@ export default async function AdminGrid() {
 	const products = await Product.find({});
     const productCards: any[] = [];
     products.map((product)=> {
-        productCards.push( <ProductRow img={product.image} productName={product.product} price={product.price} category={product.category}/>)
+        productCards.push( 
+        <ProductRow 
+            key={product._id} 
+            img={product.image} 
+            productName={product.product} 
+            price={product.price} 
+            category={product.category}
+            seller={product.seller}
+            objectId={product._id}
+        />)
     })
+
 
     return(
         <div className={styles.bodyAdminGrid}>
             <div className={styles.adminGrid}>
                 <div><p>Product Name</p></div>
                 <div><p>Price </p></div>
-                <div><p>Description</p></div>
+                <div><p>Category</p></div>
+                <div><p>Seller</p></div>
                 <div><p>Delete</p></div>
             </div>
             {productCards}
