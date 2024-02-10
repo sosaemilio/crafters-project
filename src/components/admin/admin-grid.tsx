@@ -1,7 +1,15 @@
-import Product from "./product-item";
+import ProductRow from "./product-item";
 import styles from "./admin.module.css";
+import { connectDB } from "@/lib/connection";
+import Product from "@/models/Products";
 
-export default function AdminGrid() {
+export default async function AdminGrid() {
+    // Connects to MongoDB
+    connectDB();
+
+    //Retrieve the data
+	const products = await Product.find({});
+    console.log(products);
 
     return(
         <div className={styles.bodyAdminGrid}>
@@ -11,11 +19,11 @@ export default function AdminGrid() {
                 <div><p>Description</p></div>
                 <div><p>Delete</p></div>
             </div>
-            <Product/>
-            <Product/>
-            <Product/>
-            <Product/>
-            <Product/>
+            <ProductRow/>
+            <ProductRow/>
+            <ProductRow/>
+            <ProductRow/>
+            <ProductRow/>
         </div>
 
     )
