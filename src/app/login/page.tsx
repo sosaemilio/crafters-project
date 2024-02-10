@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import { FcGoogle } from "react-icons/fc";
 import styles from "./page.module.css";
 import Link from "next/link";
+import { signIn } from "next-auth/react";
 
 function Login() {
 	return (
@@ -36,7 +37,11 @@ function Login() {
 					</Button>
 				</Form>
 				<div className="Login-google d-flex justify-content-center ">
-					<Button variant="outline-secondary" className="d-flex align-items-center justify-content-center">
+					<Button
+						onClick={() => signIn("google", { callbackUrl: "/" })}
+						variant="outline-secondary"
+						className="d-flex align-items-center justify-content-center"
+					>
 						<FcGoogle className="me-2" size={24} /> Login with Google
 					</Button>
 				</div>
