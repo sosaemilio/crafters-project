@@ -6,7 +6,7 @@ export default function AdminHeader() {
     return(
         <div className={styles.adminHeader}>
             <h1>Products</h1>
-            <Button content="Edit"/>
+            <Button content="New Product"/>
         </div>
     )
 }

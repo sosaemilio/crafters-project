@@ -37,6 +37,10 @@
     column-gap: 16px;
 }
 
+.productTitle img {
+    border-radius: 50%;
+}
+
 .adminHeader {
     display: flex;
     align-items: center;
