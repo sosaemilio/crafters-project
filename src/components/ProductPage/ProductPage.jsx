@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function ProductPage () {
+export default function ProductPage ({ product }) {
 
     const [activeImg, setActiveImage] = useState("/placeholder.png");
     const [amount, setAmount] = useState(1);
@@ -20,7 +20,7 @@ export default function ProductPage () {
                     height={300}
                     className="img-fluid object-fit-cover" 
                     style={{ height: '100%', width: '100%'}}
-                    alt="Hero Banner" 
+                    alt="Product Image" 
                     />
                 </div>
                 <div className='d-inline-flex flex-row w-auto'>
@@ -48,7 +48,7 @@ export default function ProductPage () {
             </div>
             <div className='d-inline-flex flex-column p-2 mx-lg-5 align-items-lg-center'>
                 <div>
-                    <h1 className='fw-bold'>Product</h1>
+                    <h1 className='fw-bold'>{product.product}</h1>
                     <p className=''>
                         Lorem ipsum dolor sit amet consectetur, 
                         adipisicing elit. Ab labore quis sequi 
@@ -57,7 +57,7 @@ export default function ProductPage () {
                         suscipit? Placeat vero sed nobis quibusdam? 
                         Reprehenderit, nobis!
                     </p>
-                    <h4 className='fw-semibold'>$ 100</h4>
+                    <h4 className='fw-semibold'>$ {product.price}</h4>
                     <div className='d-flex flex-row w-100'>
                         <div className='d-flex flex-row align-items-center'>
                             <button type="button" className="btn btn-secondary py-2 px-3" onClick={() =>
@@ -69,6 +69,15 @@ export default function ProductPage () {
                         <button type="button" className="btn btn-secondary fw-semibold ms-3 py-2 px-4">Add to Cart</button>
                     </div>
                 </div>
+            </div>
+            {/* <NewReview /> */}
+            <hr />
+
+            <div className="fw-semibold">
+            <h1 className="text-primary mb-6 mt-10">
+                Other Customers Reviews
+            </h1>
+            {/* <Reviews /> */}
             </div>
         </div>
     )
