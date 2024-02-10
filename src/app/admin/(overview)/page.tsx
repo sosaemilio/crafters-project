@@ -1,7 +1,10 @@
+import AdminGrid from "@/components/admin/admin-grid";
+
 export default function Page() {
 	return (
 		<>
-            <p>TEST</p>
+            <h1>Products</h1>
+			<AdminGrid/>
 		</>
 	);
 }

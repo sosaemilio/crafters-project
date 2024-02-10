@@ -1,0 +1,22 @@
+.button {
+    background-color: #1D4ED8;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    padding: 14px 24px;
+}
+
+.productItem, .adminGrid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.adminGrid {
+    background-color: #F3F4F6;
+}
+
+.bodyAdminGrid {
+    padding: 32px;
+}
