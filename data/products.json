@@ -1,0 +1,98 @@
+[
+    {
+        "product":"Sausages",
+        "price":"133.00",
+        "image":"https://loremflickr.com/640/480/business",
+        "category":"Kids",
+        "seller":"Tabitha Ebert",
+        "id":"1"
+    },
+    {
+        "product":"Bike",
+        "price":"704.00",
+        "image":"https://loremflickr.com/640/480/business",
+        "category":"Movies",
+        "seller":"Janie Nicolas",
+        "id":"2"
+    },
+    {
+        "product":"Table",
+        "price":"579.00",
+        "image":"https://loremflickr.com/640/480/business",
+        "category":"Sports",
+        "seller":"Joey Nader MD",
+        "id":"3"
+    },
+    {
+        "product":"Bike",
+        "price":"472.00",
+        "image":"https://loremflickr.com/640/480/business",
+        "category":"Clothing",
+        "seller":"Jimmy Lesch",
+        "id":"4"
+    },
+    {
+        "product":"Chips",
+        "price":"247.00",
+        "image":"https://loremflickr.com/640/480/business",
+        "category":"Books",
+        "seller":"Pamela Brekke",
+        "id":"5"
+    },
+    {
+        "product":"Table",
+        "price":"287.00",
+        "image":"https://loremflickr.com/640/480/business",
+        "category":"Beauty",
+        "seller":"Katherine Ebert",
+        "id":"6"
+    },
+    {
+        "product":"Chicken",
+        "price":"374.00",
+        "image":"https://loremflickr.com/640/480/business",
+        "category":"Health",
+        "seller":"Kristi Schowalter",
+        "id":"7"
+    },
+    {
+        "product":"Soap",
+        "price":"307.00",
+        "image":"https://loremflickr.com/640/480/business",
+        "category":"Clothing",
+        "seller":"Theresa Becker",
+        "id":"8"
+    },
+    {
+        "product":"Sausages",
+        "price":"868.00",
+        "image":"https://loremflickr.com/640/480/business",
+        "category":"Clothing",
+        "seller":"Randall Luettgen",
+        "id":"9"
+    },
+    {
+        "product":"Shoes",
+        "price":"433.00",
+        "image":"https://loremflickr.com/640/480/business",
+        "category":"Games",
+        "seller":"Judy Durgan",
+        "id":"10"
+    },
+    {
+        "product":"Table",
+        "price":"383.00",
+        "image":"https://loremflickr.com/640/480/business",
+        "category":"Computers",
+        "seller":"Andrew Paucek",
+        "id":"11"
+    },
+    {
+        "product":"Mouse",
+        "price":"238.00",
+        "image":"https://loremflickr.com/640/480/business",
+        "category":"Beauty",
+        "seller":"Maurice Quitzon",
+        "id":"12"
+    }
+]
