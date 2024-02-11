@@ -35,11 +35,6 @@ function NavbarComponent() {
 							</Nav>
 							<div className="d-flex flex-column flex-lg-row gap-3 align-items-center">
 								<div className="d-flex w-100 justify-content-start justify-content-lg-end align-items-center  gap-2">
-									<Link href="#">
-										<Button variant="">
-											<i className="bi bi-cart2 fs-5"></i>
-										</Button>
-									</Link>
 									{session?.user ? (
 										<>
 											<p>{session.user.name}</p>
