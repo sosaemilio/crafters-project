@@ -1,31 +1,42 @@
 import { connectDB } from "@/lib/connection";
 import Product from "@/models/Products";
-
+import Review from "@/models/Reviews";
 import ProductPage from "@/components/ProductPage/ProductPage";
-import NewReviews from "@/components/Reviews/NewReviews";
-import Reviews from "@/components/Reviews/Reviews";
+import NewReview from "@/components/reviews/NewReviews";
+import Reviews from "@/components/reviews/Reviews";
 
+export default async function Page({ params }: { params: { id: string } }) {
+    connectDB();
 
-async function loadProducts() {
-	connectDB();
-	const products = await Product.find()
-	return products
-}
+	const productData = await Product.findById(params.id);
+    const reviewData = await Review.find({productId: params.id});
+    console.log(reviewData);
+    const reviewHTML: any[] = [];
 
-export default async function ProductDetailsPage() {
-    const products = await loadProducts()
+    reviewData.map((reviewJson)=> {
+        reviewHTML.push( 
+        <Reviews
+            reviewContent={reviewJson.review}
+        />)
+    });
 
     return (
         <div>
-            <ProductPage/>
+            <ProductPage 
+                image={productData.image} 
+                productName={productData.product} 
+                category={productData.category} 
+                price={productData.price} 
+                seller={productData.seller}
+            />
             <div className="p-4">
-                <NewReviews/>
-                <h1 className="text-secondary p-3 my-0">
+                <NewReview productId={params.id}/>
+                <h3 className="text-secondary p-3 my-0">
                     Other Reviews
-                </h1>
-				{products.map(product => (<Reviews product={product} key={product._id}/>))}
-                {/* <Reviews /> */}
-            </div>
+                </h3>
+                {reviewHTML}
+            </div> 
+           
         </div>
     )
 };
