@@ -1,8 +1,7 @@
 import { Nav } from "react-bootstrap";
 const links = [
 	{ id: 1, name: "Home", href: "/" },
-	{ id: 2, name: "Products", href: "/products" },
-	{ id: 3, name: "About Us", href: "/about" },
+	{ id: 2, name: "Admin", href: "/admin" },
 ];
 
 export default function NavLinks() {
