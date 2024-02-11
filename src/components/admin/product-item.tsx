@@ -16,7 +16,7 @@ export default function ProductItem({img, productName, price, category, seller, 
         <div><p>${price}</p></div>
         <div><p>{category}</p></div>
         <div><p>{seller}</p></div>
-        {/* <div><DeleteButton content="Delete" objectId="1"/></div> */}
+        {/* <div><DeleteButton content="Delete" objectId={objectId}/></div> */}
     </div>
   );
 }

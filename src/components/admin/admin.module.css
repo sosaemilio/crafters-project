@@ -60,3 +60,9 @@
     color: #FFFFFF;
     text-decoration: none;
 }
+
+.newProductForm {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
