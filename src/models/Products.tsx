@@ -31,6 +31,14 @@ const ProductSchema = new Schema({
 		required: [true, "product name is required"],
 		trim: true,
 	},
+	ratings: {
+        type: Number,
+        default: 0
+    },
+    reviews: {
+        type: String,
+        required: true,
+    },  
 });
 
 export default models.Product || model("Product", ProductSchema);

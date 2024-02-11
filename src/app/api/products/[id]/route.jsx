@@ -23,9 +23,9 @@ export async function GET(request, { params }) {
 	
 export async function DELETE(request, {params}) {
 	try {
-		const productDeleted = await Task.findByIdAndDelete(params.id)
+		const productDeleted = await Product.findByIdAndDelete(params.id)
 		
-		if (!taskDeleted)
+		if (!productDeleted)
 			return NextResponse.json({
 				message: "Task not found",
 			}, {
