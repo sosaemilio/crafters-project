@@ -95,7 +95,7 @@ function SignUp() {
 					</div>
 					<div className="my-5 d-flex gap-2 justify-content-center align-items-center">
 						<p>Already a member?</p>
-						<Link href="#">Sign in</Link>
+						<Link href="/login">Sign in</Link>
 					</div>
 				</div>
 			</div>
