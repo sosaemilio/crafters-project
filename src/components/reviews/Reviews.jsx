@@ -28,14 +28,14 @@ export default function Reviews ({reviewContent}) {
 
                     <div className="row align-items-center my-2">
                         <div className="ratings col-auto align-items-center">
-                            <StarRatings
+                            {/* <StarRatings
                                 rating={5}
                                 starRatedColor="#ffb829"
                                 numberOfStars={5}
                                 starDimension="18px"
                                 starSpacing="1px"
                                 name="rating"
-                            />
+                            /> */}
                         </div>
                     </div>
 
