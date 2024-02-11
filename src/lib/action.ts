@@ -66,11 +66,6 @@ export async function createProduct(formData: FormData) {
     redirect('/admin');
 }
 
-const ReviewSchema = z.object({
-  review: z.string(),
-  productId: z.string(),
-});
-
 export async function createReview(formData: FormData) {
   const {review, productId} = {
     review: formData.get('review'),
@@ -78,9 +73,11 @@ export async function createReview(formData: FormData) {
   }
 
   var new_review = new Review({
-    "product": review,
+    "review": review,
     "productId": productId,
   });
   
   new_review.save();
+  revalidatePath(`/product/${productId}`);
+  redirect(`/product/${productId}`);
 }

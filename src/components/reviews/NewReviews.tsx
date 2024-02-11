@@ -6,8 +6,6 @@ import { createReview } from "@/lib/action";
 // import StarRatings from "react-star-ratings";
 
 export default function NewReview({productId}:{productId: string}) {
-	console.log(typeof productId);
-
 	// const [newReview, setNewReview] = useState ({
 	// 	review: ""
 	// })
@@ -72,7 +70,7 @@ export default function NewReview({productId}:{productId: string}) {
 						// onChange={handleChange}
 					>
 					</textarea>
-					<input type="hidden" name="productId" value="1" id="productName"/>
+					<input type="hidden" name="productId" value={productId} id="productName"/>
 					<input className="btn btn-primary" type="submit"/>
 				</form>
 			</div>

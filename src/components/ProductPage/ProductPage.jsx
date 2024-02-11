@@ -58,7 +58,9 @@ export default function ProductPage ({ image, productName, category, price, sell
             <div className=' flex-column p-2 mx-lg-5 align-items-lg-center w-100 w-lg-50'>
                 <div>
                     <h1 className='fw-bold'>{productName}</h1>
-                    <h4 className='fw-semibold'>$ {price}</h4>
+                    <h2 className='fw-semibold'>$ {price}</h2>
+                    <br></br>
+                    <h3>Product Description</h3>
                     <p>Seller: {seller}</p>
                     <p>Product Category: {category}</p>
                 </div>
