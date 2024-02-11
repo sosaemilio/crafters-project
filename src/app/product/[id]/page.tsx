@@ -2,13 +2,12 @@ import { connectDB } from "@/lib/connection";
 import Product from "@/models/Products";
 
 import ProductPage from "@/components/ProductPage/ProductPage";
-import NewReviews from "@/components/reviews/NewReviews";
+import NewReview from "@/components/reviews/NewReviews";
 import Reviews from "@/components/reviews/Reviews";
 
 export default async function Page({ params }: { params: { id: string } }) {
     connectDB();
 	const productData = await Product.findById(params.id);
-
     return (
         <div>
             <ProductPage 
@@ -19,7 +18,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                 seller={productData.seller}
             />
             <div className="p-4">
-                <NewReviews/>
+                <NewReview productId={params.id}/>
                 <h1 className="text-secondary p-3 my-0">
                     Other Reviews
                 </h1>

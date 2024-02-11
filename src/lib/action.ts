@@ -3,6 +3,7 @@
 import { z } from 'zod';
 import { connectDB } from './connection';
 import Product from "@/models/Products"
+import Review from "@/models/Reviews";
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { writeFile } from 'fs/promises';
@@ -63,4 +64,23 @@ export async function createProduct(formData: FormData) {
 
     revalidatePath('/admin');
     redirect('/admin');
+}
+
+const ReviewSchema = z.object({
+  review: z.string(),
+  productId: z.string(),
+});
+
+export async function createReview(formData: FormData) {
+  const {review, productId} = {
+    review: formData.get('review'),
+    productId: formData.get('productId')
+  }
+
+  var new_review = new Review({
+    "product": review,
+    "productId": productId,
+  });
+  
+  new_review.save();
 }
