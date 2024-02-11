@@ -31,7 +31,7 @@ export default async function AdminGrid() {
                 <div><p>Price </p></div>
                 <div><p>Category</p></div>
                 <div><p>Seller</p></div>
-                <div><p>Delete</p></div>
+                {/* <div><p>Delete</p></div> */}
             </div>
             {productCards}
         </div>
