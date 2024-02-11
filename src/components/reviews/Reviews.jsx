@@ -4,7 +4,7 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import StarRatings from "react-star-ratings";
 
-export default function Reviews ({product}) {
+export default function Reviews ({reviewContent}) {
   return (
     <div className="container-sm p-3 mx-0">
         <div className="row">
@@ -21,8 +21,7 @@ export default function Reviews ({product}) {
                         </div>
                         <div className="col p-0">
                             <div className="d-flex flex-column">
-                                <p className="fs-5 mb-0">User</p>
-                                <time className="d-block text-secondary">Posted on: 12-12-2023</time>
+                                <p className="fs-5 mb-0">Verified Buyer</p>
                             </div>
                         </div>
                     </div>
@@ -38,11 +37,10 @@ export default function Reviews ({product}) {
                                 name="rating"
                             />
                         </div>
-                        <span className="col text-warning fw-semibold p-0">5</span>
                     </div>
 
                     <p className="row mb-2 text-secondary">
-                    {product.review}
+                        {reviewContent}
                     </p>
                 </article>
             </div>

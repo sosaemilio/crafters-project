@@ -2,44 +2,43 @@
 
 import React, { ChangeEvent, FormEvent, useState }  from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { createReview } from "@/lib/action";
 // import StarRatings from "react-star-ratings";
 
-const NewReview = () => {
+export default function NewReview({productId}:{productId: string}) {
+	// const [newReview, setNewReview] = useState ({
+	// 	review: ""
+	// })
 
-	const [newReview, setNewReview] = useState ({
-		review: ""
-	})
-
-	const createReview = async () => {
-		const reviewData = { review: newReview.review }; 
+	// const createReview = async () => {
+	// 	const reviewData = { review: newReview.review }; 
     
-		try {
-			const res = await fetch('/api/products', { 
-				method: "POST",
-				body: JSON.stringify(reviewData),
-				headers: { "Content-Type": "application/json" }
-			});
+	// 	try {
+	// 		const res = await fetch('/api/products', { 
+	// 			method: "POST",
+	// 			body: JSON.stringify(reviewData),
+	// 			headers: { "Content-Type": "application/json" }
+	// 		});
 
-			if (!res.ok) {
-				throw new Error("Failed to create review");
-			}
+	// 		if (!res.ok) {
+	// 			throw new Error("Failed to create review");
+	// 		}
 
-			const data = await res.json();
-			console.log(data);
-		} catch (error) {
-			console.error(error);
-		}
-	}
+	// 		const data = await res.json();
+	// 		console.log(data);
+	// 	} catch (error) {
+	// 		console.error(error);
+	// 	}
+	// }
 
-	const handleSubmit = async (e: FormEvent) => {
-		e.preventDefault()
-		await createReview()
+	// const handleSubmit = async (e: FormEvent) => {
+	// 	e.preventDefault()
+	// 	await createReview()
+	// }
 
-	}
-
-	const handleChange = (
-		e: ChangeEvent<HTMLTextAreaElement> 
-		) => setNewReview ({ ...newReview, [e.target.name]: e.target.value });
+	// const handleChange = (
+	// 	e: ChangeEvent<HTMLTextAreaElement> 
+	// 	) => setNewReview ({ ...newReview, [e.target.name]: e.target.value });
 
 	return (
 		<div className="p-3">
@@ -59,25 +58,24 @@ const NewReview = () => {
 				</div> 
 			*/}
 			<div className="mb-4 mt-5">
+				<form action={createReview}>
 				<label className="d-block form-floating my-2"> Writte a Review: </label>
-				<form onSubmit={handleSubmit}>
 					<textarea
 						rows={4}
 						className="form-control w-100 w-lg-25"
 						placeholder="Your review"
 						name="review"
 						required
-						onChange={handleChange}>
+						id="review"
+						// onChange={handleChange}
+					>
 					</textarea>
-					<button className="btn btn-primary">
-						Post Review
-					</button>
+					<input type="hidden" name="productId" value={productId} id="productName"/>
+					<input className="btn btn-primary" type="submit"/>
 				</form>
 			</div>
-
-			
 		</div>
 	);
 };
 
-export default NewReview;
+

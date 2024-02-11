@@ -17,7 +17,7 @@ function NavbarComponent() {
 		<>
 			<Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
 				<Container fluid>
-					<Link href="#">
+					<Link href="/">
 						<Image src="/HandCraftedHavenLogo.jpg" alt="logo coolinary" width={150} height={45} />
 					</Link>
 					<Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />

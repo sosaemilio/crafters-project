@@ -36,8 +36,7 @@ const ProductSchema = new Schema({
         default: 0
     },
     reviews: {
-        type: String,
-        required: true,
+        type: String
     },  
 });
 
