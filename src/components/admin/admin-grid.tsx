@@ -19,19 +19,19 @@ export default async function AdminGrid() {
             price={product.price} 
             category={product.category}
             seller={product.seller}
-            objectId={product._id}
+            objectId={product._id.toString()}
         />)
-    })
+    });
 
 
-    return(
+    return (
         <div className={styles.bodyAdminGrid}>
             <div className={styles.adminGrid}>
                 <div><p>Product Name</p></div>
                 <div><p>Price </p></div>
                 <div><p>Category</p></div>
                 <div><p>Seller</p></div>
-                <div><p>Delete</p></div>
+                {/* <div><p>Delete</p></div> */}
             </div>
             {productCards}
         </div>

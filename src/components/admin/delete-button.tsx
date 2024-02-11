@@ -1,10 +1,8 @@
-'use client'
+'use client';
+
 import styles from "./admin.module.css";
 import Product from "@/models/Products";
 import { connectDB } from "@/lib/connection";
-
-
-
 
 export default function DeleteButton({ content, objectId }: {content: string, objectId: string}) {
   function deleteProduct(id: string) {
@@ -19,7 +17,7 @@ export default function DeleteButton({ content, objectId }: {content: string, ob
     }
     });
   }
-  
+
   return (
     <button 
       className={styles.deleteButton} 
