@@ -6,14 +6,18 @@ import { FcGoogle } from "react-icons/fc";
 import styles from "./page.module.css";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 function Login() {
+	const router = useRouter();
+
 	const handlesubmit = async (e: any) => {
 		e.preventDefault();
 		const email = e.target[0].value;
 		const password = e.target[1].value;
 
-		signIn("credentials", { redirect: false, email, password, callbackUrl: "/" });
+		signIn("credentials", { email, password, redirect: false });
+		router.push("/");
 	};
 
 	return (
