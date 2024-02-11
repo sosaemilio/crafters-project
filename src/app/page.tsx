@@ -19,7 +19,7 @@ async function Home() {
 		<div className="container-xxl p-5">
 			<HeroBanner/>
 			<Filter/>
-			<main className={styles.cardsGrid}>
+			<main id="sectionToScrollTo" className={styles.cardsGrid}>
 				{products.map(product => (<Card product={product} key={product._id}/>))}
 			</main>
 		</div>

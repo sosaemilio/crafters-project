@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import Link from 'next/link';
+
 import "bootstrap/dist/css/bootstrap.min.css";
 // import styles from './HeroBanner.module.css';
 import { Button } from "react-bootstrap";
@@ -14,9 +16,11 @@ export default function HeroBanner() {
 							<strong>Products for you</strong>
 						</h1>
 						<p>Support local products and promoting sustainable consumption!</p>
-						<Button variant="dark" size="lg" className="w-70 align-self-start">
-							See More
-						</Button>
+						<Link href="#sectionToScrollTo">
+							<Button variant="dark" size="lg" className="w-70 align-self-start">
+								See More
+							</Button>                       
+						 </Link>
 					</div>
 				</div>
 				<div className="col-md-6 mt-4 m-md-0">
