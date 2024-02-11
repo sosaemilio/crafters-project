@@ -20,12 +20,6 @@ export default function Card({ product }) {
         </Link>          
         <div className={styles.cardBottom}>
           <p>{`$ ${product.price}`}</p>
-          <Image
-            src="/products/vector.png"
-            width={20}
-            height={18}
-            alt="favorite product"
-          />
         </div>
       </div>
     );
