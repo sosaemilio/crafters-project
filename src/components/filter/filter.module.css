@@ -1,0 +1,9 @@
+.filter-body {
+  display: 0;
+  overflow: hidden;
+  transition: height 600ms ease-in-out;
+}
+
+.filter-body.expanded {
+  height: 150px;
+}

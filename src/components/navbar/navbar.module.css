@@ -1,0 +1,101 @@
+
+.navimage{
+    width: 100%;
+    max-width: 100%;
+}
+.navimagediv{
+    max-width: 100%;
+}
+
+
+@media (min-width: 500px) {
+    .navimage{
+        width: 100%;
+        max-width: 369px;
+    }
+    .navimagediv{
+        max-width: 369px;
+    }
+}
+
+
+@media (min-width: 1000px) {
+    .navbar{
+        display: flex;
+        width: 100%; 
+    }
+    /*logo*/
+    .logo{
+        flex: 1;
+        max-width: 100%;
+        margin: 10px;
+    
+    }
+    .navimage{
+        width: 100%;
+        max-width: 369px;
+    }
+    .navimagediv{
+        max-width: 369px;
+    }
+
+    /*buttons in desktop screen*/
+    .navbuttonsandtabsdiv{
+        flex: 1;
+        float: right; 
+        margin-left: 20px;
+        margin-right:20px;
+        text-decoration: none;
+        padding-top: 15px;
+    }
+    
+
+    .navtabs{
+        float: right;
+        margin-right: 10%;
+        width: 100px;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        
+    }
+   .navbuttonone{
+    float: right;
+    margin-right: 1%;
+    border: 1.5px solid #1D4ED8;
+    border-radius: 5px;
+    width: 130px;
+    text-align: center;
+    text-decoration: none;
+
+   }
+   .navbuttontwo{
+    float: right;
+    margin-right: 10%;
+    border: 1.5px solid #1D4ED8;
+    background-color: #1D4ED8;
+    border-radius: 5px;
+    width: 130px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+
+   }
+   .navbuttontwo:hover{
+    background-color: white;
+    color: #1D4ED8;
+
+   }
+   .navbuttonone:hover{
+    background-color: #1D4ED8;
+    color: white;
+
+   }
+
+   .span{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+   }
+}
