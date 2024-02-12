@@ -27,19 +27,22 @@ const handler = NextAuth({
 					});
 
 					if (user) {
-						const isPasswordCorrect = await bcrypt.compare(credentials?.password, user.password);
-
-						if (isPasswordCorrect) {
-							return user;
+						if (credentials?.password) {
+							const isPasswordCorrect = await bcrypt.compare(credentials.password, user.password);
+							if (isPasswordCorrect) {
+								return user;
+							} else {
+								throw new Error("Credenciales incorrectas");
+							}
 						} else {
-							throw new Error("Wrong Credentials!");
+							throw new Error("La contraseña no fue proporcionada");
 						}
 					} else {
-						throw new Error("User not found!");
+						throw new Error("Usuario no encontrado");
 					}
 				} catch (err) {
 					console.log(err);
-					throw new Error("Error in authentication");
+					throw new Error("Error en la autenticación");
 				}
 			},
 		}),
