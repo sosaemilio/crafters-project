@@ -10,10 +10,7 @@ import styles from "./Filter.module.css";
 function Filter() {
 	const [showFilter, setShowFilter] = useState(false);
 	let arrSort = ["Most Popular", "Best Rating", "Newest"];
-	let arrCategory = ["Category 1", "Category 2", "Category 3"];
-	let arrBrand = ["Brand 1", "Brand 2", "Brande 3"];
-	let arrColor = ["Color 1", "Color 2", "Color 3"];
-	let arrSize = ["Size 1", "Size 2", "Size 3"];
+	let arrCategory = ["Kids", "Movies", "Sports"];
 
 	const toggleFilter = () => {
 		setShowFilter(!showFilter);
@@ -35,15 +32,10 @@ function Filter() {
 				<div
 					className={`filter-body ${
 						showFilter ? styles.expanded : ""
-					} d-md-flex justify-content-between align-items-center mt-4`}
+					} d-md-flex align-items-center mt-4`}
 				>
 					<DropDownComponent name="Sort" items={arrSort} />
-					<div className="icon-group d-sm-flex justify-content-start justify-content-md-between  align-items-center gap-4">
-						<DropDownComponent items={arrCategory} name="Category" />
-						<DropDownComponent items={arrBrand} name="Brand" />
-						<DropDownComponent items={arrColor} name="Color" />
-						<DropDownComponent items={arrSize} name="Size" />
-					</div>
+					<DropDownComponent items={arrCategory} name="Category" />
 				</div>
 			)}
 		</div>
