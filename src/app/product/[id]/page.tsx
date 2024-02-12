@@ -31,12 +31,19 @@ export default async function Page({ params }: { params: { id: string } }) {
             />
             <div className="p-4">
                 <NewReview productId={params.id}/>
+
                 <h3 className="text-secondary p-3 my-0">
                     Other Reviews
                 </h3>
-                {reviewHTML}
+
+                <div className=" container-sm p-3 mx-0">
+                    <div className="d-flex flex-column flex-sm-row">
+                    {reviewHTML}
+
+                    </div>
+                </div>
+
             </div> 
-           
         </div>
     )
 };
