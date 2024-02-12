@@ -60,9 +60,8 @@ export default function ProductPage ({ image, productName, category, price, sell
                     <h1 className='fw-bold'>{productName}</h1>
                     <h2 className='fw-semibold'>$ {price}</h2>
                     <br></br>
-                    <h3>Product Description</h3>
-                    <p>Seller: {seller}</p>
-                    <p>Product Category: {category}</p>
+                    <p className='fw-semibold'>Seller: {seller}</p>
+                    <p className='fw-semibold'>Product Category: {category}</p>
                 </div>
             </div>
         </div>

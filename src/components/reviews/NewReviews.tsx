@@ -71,7 +71,7 @@ export default function NewReview({productId}:{productId: string}) {
 					>
 					</textarea>
 					<input type="hidden" name="productId" value={productId} id="productName"/>
-					<input className="btn btn-primary" type="submit"/>
+					<input className="btn btn-primary my-3 px-4" type="submit" value="Post"/>
 				</form>
 			</div>
 		</div>
