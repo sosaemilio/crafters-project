@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import DropDownComponent from "../dropdown/dropdown";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
-import styles from "./Filter.module.css";
+import styles from "./filter.module.css";
 
 function Filter() {
 	const [showFilter, setShowFilter] = useState(false);
