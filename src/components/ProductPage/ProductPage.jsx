@@ -34,7 +34,7 @@ export default function ProductPage ({ image, productName, category, price, sell
                         alt="Product Image" 
                     />
                 </div>
-                <div className='d-inline-flex flex-row w-auto'>
+                {/* <div className='d-inline-flex flex-row w-auto'>
                     <div className='w-auto'>
                         <Image
                             src="/placeholder.png" 
@@ -53,7 +53,7 @@ export default function ProductPage ({ image, productName, category, price, sell
                             alt="Hero Banner" 
                         />
                     </div>
-                </div>
+                </div> */}
             </div>
             <div className=' flex-column p-2 mx-lg-5 align-items-lg-center w-100 w-lg-50'>
                 <div>
