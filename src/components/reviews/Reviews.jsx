@@ -6,11 +6,10 @@ import StarRatings from "react-star-ratings";
 
 export default function Reviews ({reviewContent}) {
   return (
-    <div className="container-sm p-3 mx-0">
         <div className="row">
             <div className="col d-inline w-auto p-3">
                 <article className="rounded-2 border 
-                shadow-sm p-3 pb-4 bg-body-tertiary">
+                shadow-sm p-4 pb-4 me-3 bg-body-tertiary">
                     <div className="row align-items-center">
                         <div className="col-auto w-auto h-auto">
                             <img
@@ -19,7 +18,7 @@ export default function Reviews ({reviewContent}) {
                             alt="user"
                         />
                         </div>
-                        <div className="col p-0">
+                        <div className="col ps-2">
                             <div className="d-flex flex-column">
                                 <p className="fs-5 mb-0">Verified Buyer</p>
                             </div>
@@ -45,6 +44,5 @@ export default function Reviews ({reviewContent}) {
                 </article>
             </div>
         </div> 
-    </div>
   );
 };
